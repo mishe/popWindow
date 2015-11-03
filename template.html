@@ -1,0 +1,30 @@
+<div class="pop_window_wrap">
+    <% if(type==1){%>
+    <div class="pop_window" id="<%=uniqID%>">
+        <% if(closeBtn){ %>
+        <div class="no_btn close_btn">Ｘ</div>
+        <% } %>
+        <div class="pop_header">
+            <span class="no_btn"><%=no%></span>
+            <span class="yes_btn"><%=yes%></span>
+            <span class="pop_title"><%=title%></span>
+        </div>
+        <div class="pop_content"><%=content%></div>
+    </div>
+    <% }else if(type==2){ %>
+    <div class="pop_window pop_window2" id="<%=uniqID%>">
+        <% if(title){ %>
+        <div class="pop_title"><%=title%></div>
+        <% } %>
+        <div class="pop_content"><%=content%></div>
+        <div class="pop_btns">
+            <% if(no){ %>
+            <span class="yes_btn"><%=yes%></span>
+            <span class="no_btn"><%=no%></span>
+            <% }else{ %>
+            <span class="yes_btn yes_btn_all"><%=yes%></span>
+            <% } %>
+        </div>
+    </div>
+    <% } %>
+</div>
