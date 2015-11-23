@@ -25,13 +25,14 @@ $.extend($,{
         opt= $.extend(defaultOptions,options);
         if(opt.type==1) opt.no=opt.no||'取消';
         win=$(template(opt));
-        $('body').append(win).on('tap','.yes_btn,.no_btn,.pop_window_wrap',function(e){
+        $('body').append(win).on('tap.popWindow'+opt.uniqID,'.yes_btn,.no_btn,.pop_window_wrap',function(e){
             var pos=false,
                 obj=$(e.target),
                 obj2=$(e.currentTarget);
 
             if(obj.hasClass('pop_window_wrap') && opt.tapMask){
                 win.remove();
+                $('body').off('tap.popWindow'+opt.uniqID);
                 return false;
             }
             if(obj2.hasClass('yes_btn') || obj2.hasClass('no_btn') ) {
@@ -41,9 +42,11 @@ $.extend($,{
                 if ($.type(opt.callback) == 'function') {
                     if (opt.callback(pos) !== false) {
                         win.remove();
+                        $('body').off('tap.popWindow'+opt.uniqID);
                     }
                 } else {
                     win.remove();
+                    $('body').off('tap.popWindow'+opt.uniqID);
                 }
             }
         });
