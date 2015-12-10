@@ -1,31 +1,117 @@
-# popWindow
-触屏弹窗组件
+# popWindow的使用
 
-#参数列表
+所有content都支持是html文本
 
-title:
-弹窗标题，可以是html
+## 模拟Alert框
 
-content:
-弹窗正文，可以是html
+### 方式一 基本alert框（只有alert内容）
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2
+})
+```
+### 方式二， 有标题的alert框
+```javascript
+$.popWindow({
+    title:'title',
+    content:'window1',
+    type:2
+})
+```
 
-yes:'确认'
-确认按钮的文案
+### 方式三 带回调的aler框
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2,
+    callback:function(){
+        alert(0)
+    }
+})
+```
 
-no:''
-取消按钮的文案，如果为空则没有取消按钮
+### 方式四 带回调和关闭按钮的aler框
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2,
+    closeBtn:true,
+    callback:function(){
+        alert(0)
+    }
+})
+```
 
-type:
-弹窗类型
+### 方式五 自定义确认按钮的文本
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2,
+    yes:'aaaaaa',
+    closeBtn:true,
+    callback:function(){
+        alert(0)
+    }
+})
+```
 
-1：为按钮在标题的两侧
-2：按钮在弹窗底部
+### 方式六 点击遮罩层关闭弹窗，设置 tapMask=true
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2,
+    yes:'aaaaaa',
+    tapMask:true,
+    closeBtn:true,
+    callback:function(){
+        alert(0)
+    }
+})
+```
 
-closeBtn:false
-是否在右上角显示关闭按钮
+## 模拟confirm 框
 
-tapMask:false
-是否允许点击mask关闭窗口
+和alert框的主要区别是，confim框有2个按钮，参数分别为：yes和no，默认yes=确认，no=取消
 
-callback:
-取消（关闭）和确认按钮按钮点击后的回调，回传参数bool，确认为ture，其他false
+和alert一样，可以定制按钮的文案
+
+具体如下：
+
+```javascript
+$.popWindow({
+    content:'window1',
+    type:2,
+    yes:'确认'
+    no:'取消'
+    callback:function(bl){
+        if(bl){
+            alert(‘确认’)
+        }else{
+            alert('取消')
+        }
+    }
+})
+```
+
+## 接受用户输入的类型提示框
+
+这个类型的弹窗，确认和取消按钮分别在左右上角
+
+而接收用户输入交互发生在弹窗的内容区域，可以自己自定义content内容
+
+具体如下：
+
+```javascript
+$.popWindow({
+    content:'请输入....<textarea placeholder="请输入..."></textarea>',
+    yes:'确认'
+    no:'取消'
+    callback:function(bl){
+        if(bl){
+
+        }
+    }
+})
+```
+
