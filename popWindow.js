@@ -8,7 +8,7 @@ var template=require('./popWindow.html');
 require('./popWindow.css');
 template= _.template(template);
 $.extend($,{
-    popWindow:function(options){
+   popWindow:function(options){
         var defaultOptions={
                 title:'',
                 content:'',
@@ -24,7 +24,7 @@ $.extend($,{
             win;
         opt= $.extend(defaultOptions,options);
         if(opt.type==1) opt.no=opt.no||'取消';
-        win=$(template(opt));
+        win=$(popWindow(opt));
         $('body').append(win).on('tap.popWindow'+opt.uniqID,'.yes_btn,.no_btn,.pop_window_wrap',function(e){
             var pos=false,
                 obj=$(e.target),
