@@ -1,0 +1,18 @@
+password-mask{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
+
+.trade-password{position:absolute;bottom:400px;left:50px;right:50px;background:#fff}
+.trade-password .trade-password-title{margin-bottom:30px;height:70px;line-height:70px;border-bottom:1px solid #ddd;text-align:center;font-size:30px}
+.trade-password .trade-tip{text-align:center;font-size:28px}
+.trade-password .trade-num{color:#ff6046}
+.trade-password .key-value{float:left;width:80px;height:80px;text-align:center;line-height:80px;font-size:40px;border-left:1px solid #ddd}
+.trade-password .key-value:first-child{border-left:none}
+.trade-password .trade-box{margin:30px auto 0;width:482px;height:80px;border:1px solid #ddd;border-radius:10px}
+.trade-password .forgot-password-btn{float:right;font-size:24px;line-height:30px;margin:30px;color:#666}
+.trade-password .cancel-btn{clear:both;height:60px;line-height:60px;border-top:1px solid #ddd;text-align:center;font-size:26px;margin-top:30px}
+
+.keyboard-box{position:fixed;bottom:0;left:0;width:100%;height:320px;background:#fff;}
+.keyboard-box .key-one{float:left;width:33.33%;height:80px;line-height:80px;text-align:center;border-left:1px solid #ddd;border-bottom:1px solid #ddd;font-size:40px}
+.keyboard-box .key-one:nth-child(3n+1){border-left:0}
+.keyboard-box .key-one:hover{background: #f0f0f0}
+.keyboard-box .reset:before{background-position:0 -40px;width:40px;height:40px}
+.keyboard-box .backspace:before{background-position:-43px -40px;width:60px;height:38px}
