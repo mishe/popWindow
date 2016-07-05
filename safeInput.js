@@ -87,29 +87,29 @@ tradePassword:function (opt,type,value,callback) {
 
         function keyBoard(){
             return '<div class="keyboard-box">'
-                +'<span class="key-one" data-num="7">7</span><span class="key-one" data-num="8">8</span>'
-                +'<span class="key-one" data-num="9">9</span><span class="key-one" data-num="4">4</span>'
-                +'<span class="key-one" data-num="5">5</span><span class="key-one" data-num="6">6</span>'
                 +'<span class="key-one" data-num="1">1</span><span class="key-one" data-num="2">2</span>'
-                +'<span class="key-one" data-num="3">3</span><span class="icons key-one reset" data-num="reset"></span>'
-                +'<span class="key-one" data-num="7">0</span><span class="icons key-one backspace" data-num="backspace"></span></div>';
+                +'<span class="key-one" data-num="3">3</span><span class="key-one" data-num="4">4</span>'
+                +'<span class="key-one" data-num="5">5</span><span class="key-one" data-num="6">6</span>'
+                +'<span class="key-one" data-num="1">1</span><span class="key-one" data-num="8">8</span>'
+                +'<span class="key-one" data-num="9">9</span><span class="icons key-one reset" data-num="reset"></span>'
+                +'<span class="key-one" data-num="0">0</span><span class="icons key-one backspace" data-num="backspace"></span></div>';
         }
 
         function template(){
             var str='<div class="password-mask"><div class="trade-password"><h3 class="trade-password-title">请输入摇旺交易密码</h3>';
             if(opt.value>0)
-                str+='<p class="trade-tip">交易金额：<span class="trade-num">￥'+opt.value+'元</span></p>'
+                str+='<p class="trade-tip">交易金额：<span class="trade-num">'+opt.value+'元</span></p>'
 
             str+='<div class="trade-box"><span class="key-value"></span><span class="key-value"></span>'
                 +'<span class="key-value"></span><span class="key-value"></span><span class="key-value"></span>'
                 +'<span class="key-value"></span></div><a href="'+forgotUrl+'" class="forgot-password-btn">忘记密码</a>'
                 +'<div class="cancel-btn">取消</div></div><div class="keyboard-box">'
-                +'<span class="key-one" data-num="7">7</span><span class="key-one" data-num="8">8</span>'
-                +'<span class="key-one" data-num="9">9</span><span class="key-one" data-num="4">4</span>'
-                +'<span class="key-one" data-num="5">5</span><span class="key-one" data-num="6">6</span>'
                 +'<span class="key-one" data-num="1">1</span><span class="key-one" data-num="2">2</span>'
-                +'<span class="key-one" data-num="3">3</span><span class="icons key-one reset" data-num="reset"></span>'
-                +'<span class="key-one" data-num="7">0</span><span class="icons key-one backspace" data-num="backspace"></span></div></div>';
+                +'<span class="key-one" data-num="3">3</span><span class="key-one" data-num="4">4</span>'
+                +'<span class="key-one" data-num="5">5</span><span class="key-one" data-num="6">6</span>'
+                +'<span class="key-one" data-num="7">7</span><span class="key-one" data-num="8">8</span>'
+                +'<span class="key-one" data-num="9">9</span><span class="icons key-one reset" data-num="reset"></span>'
+                +'<span class="key-one" data-num="0">0</span><span class="icons key-one backspace" data-num="backspace"></span></div></div>';
             return str;
         }
     }
