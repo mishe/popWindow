@@ -50,5 +50,10 @@ $.extend($,{
                 }
             }
         });
+        $(window).on('popstate.popWindow'+ opt.uniqID,function(){
+           win.remove();
+           $('body').off('tap.popWindow' + opt.uniqID);
+           $(window).off('popstate.popWindow'+ opt.uniqID);
+       })
     }
 });
