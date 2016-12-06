@@ -1,5 +1,5 @@
 .pop_window_wrap{position:fixed;z-index:101;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4)}
-.pop_window{position:absolute;top:50%;left:50%;width:85%;margin:-30% 0 0 -42.5%;background:#fff;border-radius:4px}
+.pop_window{position:absolute;top:50%;left:50%;width:85%;max-height:80%;margin:-30% 0 0 -42.5%;background:#fff;border-radius:4px}
 
 
 .pop_window .pop_header{height:41px;line-height:40px;font-size:16px;border-bottom:1px solid #e3e3e3;text-align:center}
