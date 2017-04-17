@@ -45,7 +45,6 @@ module.exports=function (options) {
     var obj=win.find('.pop_window');
     obj.css('margin-top',-obj.height()/2);
     $(window).on('popstate.popWindow'+ opt.uniqID,function(){
-        history.go(1);
         win.remove();
         $('body').off('tap.popWindow' + opt.uniqID);
         $(window).off('popstate.popWindow'+ opt.uniqID);
